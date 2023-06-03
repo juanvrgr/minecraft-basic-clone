@@ -6,6 +6,9 @@ import woodImg from './wood.png';
 import brickImg from './brick.png';
 import redConcreteImg from './redconcrete.png';
 import whiteConcreteImg from './whiteconcrete.png';
+import stoneImg from './stone.png';
+import bedrockImg from './bedrock.png';
+import obsidianImg from './obsidian.png';
 
 export {
 	dirtImg,
@@ -15,5 +18,8 @@ export {
 	logImg,
     brickImg,
     redConcreteImg,
-    whiteConcreteImg
+    whiteConcreteImg,
+    stoneImg,
+    bedrockImg,
+    obsidianImg
 }

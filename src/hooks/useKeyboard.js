@@ -15,7 +15,10 @@ function actionByKey(key) {
 		Digit5: 'log',
         Digit6: 'brick',
         Digit7: 'redConcrete',
-        Digit8: 'whiteConcrete'
+        Digit8: 'whiteConcrete',
+        Digit9: 'stone',
+        Digit0: 'bedrock',
+        KeyO: 'obsidian'
 	}
 	return keyActionMap[key]
 }
@@ -35,7 +38,10 @@ export const useKeyboard = () => {
 		log: false,
         brick: false,
         redConcrete: false,
-        whiteConcrete: false
+        whiteConcrete: false,
+        stone: false,
+        bedrock: false,
+        obsidian: false
 	})
 
 	const handleKeyDown = useCallback((e) => {

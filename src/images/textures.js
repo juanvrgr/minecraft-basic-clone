@@ -8,7 +8,10 @@ import {
 	woodImg,
     brickImg,
     redConcreteImg,
-    whiteConcreteImg
+    whiteConcreteImg,
+    stoneImg,
+    bedrockImg,
+    obsidianImg
 } from './images'
 
 const dirtTexture = new TextureLoader().load(dirtImg)
@@ -20,6 +23,9 @@ const groundTexture = new TextureLoader().load(grassImg)
 const brickTexture = new TextureLoader().load(brickImg)
 const redConcreteTexture = new TextureLoader().load(redConcreteImg)
 const whiteConcreteTexture = new TextureLoader().load(whiteConcreteImg)
+const stoneTexture = new TextureLoader().load(stoneImg)
+const bedrockTexture = new TextureLoader().load(bedrockImg)
+const obsidianTexture = new TextureLoader().load(obsidianImg)
 
 dirtTexture.magFilter = NearestFilter;
 logTexture.magFilter = NearestFilter;
@@ -30,6 +36,9 @@ groundTexture.magFilter = NearestFilter;
 brickTexture.magFilter = NearestFilter;
 redConcreteTexture.magFilter = NearestFilter;
 whiteConcreteTexture.magFilter = NearestFilter;
+stoneTexture.magFilter = NearestFilter;
+bedrockTexture.magFilter = NearestFilter;
+obsidianTexture.magFilter = NearestFilter;
 groundTexture.wrapS = RepeatWrapping
 groundTexture.wrapT = RepeatWrapping
 
@@ -42,5 +51,8 @@ export {
 	groundTexture,
     brickTexture,
     redConcreteTexture,
-    whiteConcreteTexture
+    whiteConcreteTexture,
+    stoneTexture,
+    bedrockTexture,
+    obsidianTexture
 }

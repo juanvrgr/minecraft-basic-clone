@@ -1,7 +1,19 @@
 import { useEffect, useState } from 'react'
 import { useStore } from "../hooks/useStore"
 import { useKeyboard } from "../hooks/useKeyboard"
-import { dirtImg, grassImg, glassImg, logImg, woodImg, brickImg, redConcreteImg, whiteConcreteImg } from '../images/images'
+import { 
+    dirtImg, 
+    grassImg, 
+    glassImg, 
+    logImg, 
+    woodImg, 
+    brickImg, 
+    redConcreteImg, 
+    whiteConcreteImg, 
+    stoneImg, 
+    bedrockImg,
+    obsidianImg
+ } from '../images/images'
 
 const images = {
 	dirt: dirtImg,
@@ -11,7 +23,10 @@ const images = {
 	log: logImg,
     brick: brickImg,
     redConcrete: redConcreteImg,
-    whiteConcrete: whiteConcreteImg
+    whiteConcrete: whiteConcreteImg,
+    stone: stoneImg,
+    bedrock: bedrockImg,
+    obsidian: obsidianImg
 }
 
 export const TextureSelector = () => {
@@ -25,7 +40,10 @@ export const TextureSelector = () => {
 		log,
         brick,
         redConcrete,
-        whiteConcrete
+        whiteConcrete,
+        stone,
+        bedrock,
+        obsidian
 	} = useKeyboard()
 
 	useEffect(() => {
@@ -37,13 +55,16 @@ export const TextureSelector = () => {
 			log,
             brick,
             redConcrete,
-            whiteConcrete
+            whiteConcrete,
+            stone,
+            bedrock,
+            obsidian
 		}
 		const pressedTexture = Object.entries(textures).find(([k, v]) => v)
 		if (pressedTexture) {
 			setTexture(pressedTexture[0])
 		}
-	}, [setTexture, dirt, grass, glass, wood, log, brick, redConcrete, whiteConcrete])
+	}, [setTexture, dirt, grass, glass, wood, log, brick, redConcrete, whiteConcrete, stone, bedrock, obsidian])
 
 
 
