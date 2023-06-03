@@ -1,13 +1,140 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: minecraft;
+  src: url('../assets/Minecraft.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: lightblue;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-size: 40px;
+}
+
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.centered {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cursor {
+  color: white;
+}
+
+.texture-selector {
+  transform: scale(5);
+}
+
+.texture-selector img.active {
+  border: 2px solid red;
+}
+
+/* .menu {
+  top: 0px;
+  left: 10px;
+} */
+
+.minecraft-button {
+  background-color: #6aa84fff;
+  border: none;
+  color: #f0f0f0ff;
+  font-family: "Minecraft", sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  text-shadow: 1px 1px #000000ff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.minecraft-button:hover {
+  transform: scale(1.05);
+}
+
+.minecraft-button:active {
+  transform: scale(0.95);
+}
+
+.menu {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+}
+
+.menu button {
+  margin-right: 5px;
+  border: 2px solid black;
+  color: white;
+  text-shadow: 2px 2px #333;
+  background-color: #666;
+  padding: 0 8px;
+  height: 30px;
+  font: 16px/30px 'minecraft', monospace;
+}
+
+.menu button:hover {
+  color: yellow;
+  background-color: #6589AC;
+  cursor: pointer;
+}
+
+.controls {
+  background-color:rgba(0,0,0,0.5);
+}
+
+.controls ul {
+  margin:0;
+  padding:0 10px;
+  list-style-type: none;
+  font: 15px/30px arial, sans-serif;
+}
+
+.controls li {
+  display: inline-block;
+  margin-right: 5px;
+  color: white;
+}
+
+.controls span {
+  font-weight: bold;
+  color: orange;
 }
